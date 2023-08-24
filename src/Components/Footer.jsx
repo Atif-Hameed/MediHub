@@ -1,6 +1,7 @@
 import React from 'react'
 import footerBg from '../Assets/footerBg.svg'
 import mainLogo from '../Assets/mainLogoSvg.svg'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -16,7 +17,9 @@ const Footer = () => {
                     }}>
 
                     <div className='flex justify-around w-full'>
-                        <img src={mainLogo} className='w-[24rem]' alt="" />
+                        <Link to="/">
+                            <img src={mainLogo} className='w-[24rem]' alt="" />
+                        </Link>
 
                         <div className='flex gap-48'>
 

@@ -13,6 +13,7 @@ import girlBubble from '../../Assets/girlBuuble.svg'
 import personBubble from '../../Assets/personBuuble.svg'
 import keyBubble from '../../Assets/keyBuuble.svg'
 import Marquee from 'react-fast-marquee';
+import { Link } from 'react-router-dom';
 
 const FindDoctor = () => {
     return (
@@ -45,9 +46,9 @@ const FindDoctor = () => {
                                 </div>
                                 <p className='text-[#E7E7E7] text-end font-light w-[33%] text-[0.8rem] pt-4 pl-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
                             </div>
-                            
+
                             <img src={Mobile} className='w-[28rem] absolute right-[-11rem] top-[25%]' alt="" />
-                            
+
                             <div className='flex absolute justify-end gap-2 top-[30%] items-end right-[-22.5rem] '>
                                 <div className='h-[12rem] w-[0.1rem] bg-[#E7E7E7]'>
                                 </div>
@@ -85,22 +86,36 @@ const FindDoctor = () => {
                             <p className='text-[#E7E7E7] font-light w-[65%] text-[0.9rem] pt-4 pl-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
                         </div >
                     </div>
-                    <Marquee speed={100} pauseOnHover style={{ position: 'absolute', top: '7rem' }} >
-                        <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
-                            <img src={chairBubble} className='w-[4rem]' alt="" />
-                        </div>
-                        <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
-                            <img src={girlBubble} className='w-[4rem]' alt="" />
-                        </div>
+                    <Marquee speed={70} pauseOnHover style={{ position: 'absolute', top: '7rem' }} >
+
+                        <Link to="/MentalHealth">
+                            <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
+                                <img src={chairBubble} className='w-[4rem]' alt="" />
+                            </div>
+                        </Link>
+
+                        <Link to='/SkinCondition' >
+                            <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
+                                <img src={girlBubble} className='w-[4rem]' alt="" />
+                            </div>
+                        </Link>
+
+                        <Link to="/SexualHealth" >
                         <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
                             <img src={personBubble} className='w-[4rem]' alt="" />
                         </div>
+                        </Link>
+
                         <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
                             <img src={boneBubble} className='w-[4rem]' alt="" />
                         </div>
-                        <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
-                            <img src={manBubble} className='w-[4rem]' alt="" />
-                        </div>
+
+                        <Link to="/Digestive">
+                            <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
+                                <img src={manBubble} className='w-[4rem]' alt="" />
+                            </div>
+                        </Link>
+
                         <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
                             <img src={microscopeBubble} className='w-[4rem]' alt="" />
                         </div>

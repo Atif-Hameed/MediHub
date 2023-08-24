@@ -3,7 +3,7 @@ import HeroSection from './HeroSection'
 import FindDoctor from './FindDoctor'
 import PatientsOnBoeard from './PatientsOnBoeard'
 import WhyMediHub from './WhyMediHub'
-import FreqAskQuestion from './FreqAskQuestion'
+import FreqAskQuestion from '../../Components/FreqAskQuestion'
 import Footer from '../../Components/Footer'
 
 const LandingPage = () => {
