@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../../Components/Navbar'
 import { MdArrowForwardIos } from 'react-icons/md';
 import docLoc from '../../Assets/docLoc.svg'
@@ -13,6 +13,7 @@ import crown from '../../Assets/crown.svg'
 import thumb from '../../Assets/thumb.svg'
 import shade from '../../Assets/aboutShade.svg'
 import profilePhoto from '../../Assets/profilePhoto.svg'
+import { Link } from 'react-router-dom';
 
 
 const DoctorDetails = () => {
@@ -54,7 +55,9 @@ const DoctorDetails = () => {
                     </div>
 
                     <div>
-                        <button className='mt-3 py-4 px-16 rounded-lg text-lg font-medium  bg-[#DDB660] hover:bg-[#bc984c] w-fit self-center '>Video Consultation</button>
+                        <Link to="/AppointBoking" >
+                            <button className='mt-3 py-4 px-16 rounded-lg text-lg font-medium  bg-[#DDB660] hover:bg-[#bc984c] w-fit self-center '>Video Consultation</button>
+                        </Link>
                     </div>
                 </div>
 
@@ -103,7 +106,45 @@ const DoctorDetails = () => {
     )
 }
 
+
+const PlatinumDoctor = () => {
+    return (
+        <>
+            <div className='py-4 px-4 rounded-lg' style={{
+                backgroundImage: `url(${shade})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                width: '100%', height: '100%'
+            }}>
+                <div className='flex items-center gap-2'>
+                    <img src={profilePhoto} alt="" />
+                    <div className='flex flex-col'>
+                        <h1 className='text-[1.35rem] font-medium'>Assoc. Prof. Dr..</h1>
+                        <p className='text-[0.93rem] font-thin'>15 years experience</p>
+                        <div className='flex mt-1 gap-1 items-center'>
+                            <img src={thumb} className='w-[1rem]' alt="" />
+                            <p className='text-[0.75rem] font-thin'>100% (290)</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='flex gap-4 items-center mt-6'>
+                    <p>Book Appointment</p>
+                    <MdArrowForwardIos className='text-white' />
+                </div>
+            </div>
+        </>
+    )
+}
+
+
 const AvailableDoctors = () => {
+
+    const [show, setShow] = useState(false)
+
+    const handleShow = () => {
+        setShow((prev) => !prev)
+    }
+
     return (
         <>
             <div>
@@ -111,7 +152,7 @@ const AvailableDoctors = () => {
 
                 <div className='w-full px-24'>
 
-                    <div className='bg-[#D9D9D9] px-8 py-10 rounded-2xl' >
+                    <div className='bg-[#D9D9D9] px-8 py-10 rounded-2xl mt-10' >
 
                         <div className='text-black flex items-center gap-1'>
                             <p className='text-sm'>HOME</p>
@@ -186,116 +227,56 @@ const AvailableDoctors = () => {
                         <DoctorDetails />
 
                         <div className='bg-[#E7E7E7] p-6 pb-10 mt-8 rounded-lg' style={{ boxShadow: '0px 4px 8px 0px #00000040' }}>
+
                             <div className='flex items-center justify-between'>
                                 <div className='flex items-center gap-3'>
                                     <img src={crown} className='w-[1.7rem]' alt="" />
                                     <h1 className='text-[1.6rem] uppercase text-black font-medium'>Platinum Doctors</h1>
                                 </div>
-                                <p className='text-black underline text-xl' >View All</p>
+                                <p onClick={handleShow} className='cursor-pointer text-black underline text-xl' >
+                                    {show ? 'View Less' : 'View All'}
+                                </p>
                             </div>
 
                             <div className='grid grid-cols-4 gap-6 mt-6'>
-                                <div className='py-4 px-4 rounded-lg' style={{
-                                    backgroundImage:`url(${shade})`,
-                                    backgroundSize:'cover',
-                                    backgroundPosition:'center',
-                                    width:'100%', height:'100%'
-                                }}>
-                                    <div className='flex items-center gap-2'>
-                                        <img src={profilePhoto} alt="" />
-                                        <div className='flex flex-col'>
-                                            <h1 className='text-[1.35rem] font-medium'>Assoc. Prof. Dr..</h1>
-                                            <p className='text-[0.93rem] font-thin'>15 years experience</p>
-                                            <div className='flex mt-1 gap-1 items-center'>
-                                                <img src={thumb} className='w-[1rem]' alt="" />
-                                                <p className='text-[0.75rem] font-thin'>100% (290)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='flex gap-4 items-center mt-6'>
-                                        <p>Book Appointment</p>
-                                        <MdArrowForwardIos className='text-white' />
-                                    </div>
-                                </div>
 
-                                <div className='py-4 px-4 rounded-lg' style={{
-                                    backgroundImage:`url(${shade})`,
-                                    backgroundSize:'cover',
-                                    backgroundPosition:'center',
-                                    width:'100%', height:'100%'
-                                }}>
-                                    <div className='flex items-center gap-2'>
-                                        <img src={profilePhoto} alt="" />
-                                        <div className='flex flex-col'>
-                                            <h1 className='text-[1.35rem] font-medium'>Assoc. Prof. Dr..</h1>
-                                            <p className='text-[0.93rem] font-thin'>15 years experience</p>
-                                            <div className='flex mt-1 gap-1 items-center'>
-                                                <img src={thumb} className='w-[1rem]' alt="" />
-                                                <p className='text-[0.75rem] font-thin'>100% (290)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='flex gap-4 items-center mt-6'>
-                                        <p>Book Appointment</p>
-                                        <MdArrowForwardIos className='text-white' />
-                                    </div>
-                                </div>
+                                <PlatinumDoctor />
 
-                                <div className='py-4 px-4 rounded-lg' style={{
-                                    backgroundImage:`url(${shade})`,
-                                    backgroundSize:'cover',
-                                    backgroundPosition:'center',
-                                    width:'100%', height:'100%'
-                                }}>
-                                    <div className='flex items-center gap-2'>
-                                        <img src={profilePhoto} alt="" />
-                                        <div className='flex flex-col'>
-                                            <h1 className='text-[1.35rem] font-medium'>Assoc. Prof. Dr..</h1>
-                                            <p className='text-[0.93rem] font-thin'>15 years experience</p>
-                                            <div className='flex mt-1 gap-1 items-center'>
-                                                <img src={thumb} className='w-[1rem]' alt="" />
-                                                <p className='text-[0.75rem] font-thin'>100% (290)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='flex gap-4 items-center mt-6'>
-                                        <p>Book Appointment</p>
-                                        <MdArrowForwardIos className='text-white' />
-                                    </div>
-                                </div>
+                                <PlatinumDoctor />
 
-                                <div className='py-4 px-4 rounded-lg' style={{
-                                    backgroundImage:`url(${shade})`,
-                                    backgroundSize:'cover',
-                                    backgroundPosition:'center',
-                                    width:'100%', height:'100%'
-                                }}>
-                                    <div className='flex items-center gap-2'>
-                                        <img src={profilePhoto} alt="" />
-                                        <div className='flex flex-col'>
-                                            <h1 className='text-[1.35rem] font-medium'>Assoc. Prof. Dr..</h1>
-                                            <p className='text-[0.93rem] font-thin'>15 years experience</p>
-                                            <div className='flex mt-1 gap-1 items-center'>
-                                                <img src={thumb} className='w-[1rem]' alt="" />
-                                                <p className='text-[0.75rem] font-thin'>100% (290)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='flex gap-4 items-center mt-6'>
-                                        <p>Book Appointment</p>
-                                        <MdArrowForwardIos className='text-white' />
-                                    </div>
-                                </div>
+                                <PlatinumDoctor />
+
+                                <PlatinumDoctor />
+
+                            </div>
+                            <div className={`grid grid-cols-4 gap-6 mt-6 ${show ? 'block' : 'hidden'} `}>
+
+                                <PlatinumDoctor />
+
+                                <PlatinumDoctor />
+
+                                <PlatinumDoctor />
+
+                                <PlatinumDoctor />
+
+                                <PlatinumDoctor />
+
+                                <PlatinumDoctor />
+
+                                <PlatinumDoctor />
+
+                                <PlatinumDoctor />
+
                             </div>
                         </div>
 
-                        <DoctorDetails/>
+                        <DoctorDetails />
 
-                        <DoctorDetails/>
+                        <DoctorDetails />
 
-                        <DoctorDetails/>
+                        <DoctorDetails />
 
-                        <DoctorDetails/>
+                        <DoctorDetails />
 
                     </div>
 
