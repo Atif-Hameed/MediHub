@@ -20,7 +20,7 @@ const FindDoctor = () => {
         <>
             <div className='relative w-full h-full'>
 
-                <div className='w-[61rem] h-[91.37rem] z-10'>
+                <div className='md:w-[62.44%] w-full md:h-[91.37rem] h-[100vh] z-10'>
                     <div className='mt-8' style={{
                         backgroundImage: `url(${womenDoc})`,
                         backgroundSize: 'cover',
@@ -37,8 +37,9 @@ const FindDoctor = () => {
                             height: '100%',
                         }}>
 
-                            <div className='absolute top-[36%] left-[17%]'>
-                                <h1 className='text-[5rem] font-semibold w-[60%] leading-[6rem]  text-white'>Find the Right Doctor right at your fingertips</h1>
+                            {/* <div className='absolute top-[36%] left-[17%]'> */}
+                            <div className='flex h-full w-full justify-center items-center md:pr-40 md:pb-8 ' >
+                                <h1 className='md:text-[5.3rem] text-[3rem] font-semibold md:w-[60%] w-full md:leading-[6rem] leading-[3.5rem]  text-white'>Find the Right Doctor right at your fingertips</h1>
                             </div>
 
                             <div className='flex flex-row-reverse absolute gap-2 bottom-4 items-end right-4'>
@@ -47,12 +48,14 @@ const FindDoctor = () => {
                                 <p className='text-[#E7E7E7] text-end font-light w-[33%] text-[0.8rem] pt-4 pl-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
                             </div>
 
-                            <img src={Mobile} className='w-[28rem] absolute right-[-11rem] top-[25%]' alt="" />
+                            <img src={Mobile} className='md:block hidden w-[28rem] absolute right-[-11rem] top-[25%]' alt="" />
 
-                            <div className='flex absolute justify-end gap-2 top-[30%] items-end right-[-22.5rem] '>
-                                <div className='h-[12rem] w-[0.1rem] bg-[#E7E7E7]'>
+                            <div className='md:block hidden'>
+                                <div className='flex absolute justify-end gap-2 top-[30%] items-end right-[-22.5rem] '>
+                                    <div className='h-[12rem] w-[0.1rem] bg-[#E7E7E7]'>
+                                    </div>
+                                    <p className='text-[#E7E7E7] font-light w-[20.5%] text-[0.8rem] pt-4 pl-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
                                 </div>
-                                <p className='text-[#E7E7E7] font-light w-[20.5%] text-[0.8rem] pt-4 pl-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
                             </div>
 
 
@@ -62,70 +65,72 @@ const FindDoctor = () => {
 
 
                 <div>
-                    <div className='absolute top-[-8rem] w-full px-[5.5rem]'>
-                        <div className='bg-[#181818] w-full h-[18rem]  rounded-2xl mx-auto py-12' style={{ boxShadow: '5px 5px 4px 2px #00000069' }}>
-                            <div className='flex gap-4 justify-center'>
+                   
+                    <div className='absolute top-[-8rem] w-full md:px-[5.5rem] px-10'>
+                        <div className='bg-[#181818] w-full md:h-[18rem] h-full  rounded-2xl mx-auto md:py-12 py-6 md:px-0 px-4' style={{ boxShadow: '5px 5px 4px 2px #00000069' }}>
+                            <div className='flex md:flex-row flex-col gap-4 justify-center'>
 
-                                <div className='flex relative items-center bg-white rounded-lg p-2 w-[44%] gap-4'>
-                                    <BiSearch className='text-black text-3xl' />
-                                    <input type="text" placeholder='Search Doctor, Conditions or Procedures' className='w-full text-black focus:outline-none placeholder-black ::placeholder font-semibold' />
+                                <div className='flex relative items-center bg-white rounded-lg p-2 md:w-[44%] w-full md:gap-4 gap-2'>
+                                    <BiSearch className='text-black md:text-3xl text-xl' />
+                                    <input type="text" placeholder='Search Doctor, Conditions or Procedures' className='w-full md:text-md text-[0.75rem] text-black focus:outline-none placeholder-black ::placeholder font-semibold' />
                                 </div>
-                                <div className='flex relative items-center bg-white rounded-lg p-2 w-[44%] gap-4'>
-                                    <GrLocation className=' text-3xl' />
-                                    <input type="text" placeholder='Set Your Location' className='w-full text-black focus:outline-none placeholder-black ::placeholder font-semibold' />
+                                <div className='flex relative items-center bg-white rounded-lg p-2 md:w-[44%] w-full md:gap-4 gap-2'>
+                                    <GrLocation className=' md:text-3xl text-xl' />
+                                    <input type="text" placeholder='Set Your Location' className='w-full md:text-md text-[0.75rem] text-black focus:outline-none placeholder-black ::placeholder font-semibold' />
                                 </div>
 
                                 <button type='submit' value='submit' className='flex bg-black p-2 bg-gradient-to-b from-[#bd966c] via-[#966b3a] to-[#351e07] rounded-lg'>
-                                    <BiSearch className=' text-3xl' />
+                                    <BiSearch className=' md:text-3xl text-xl' />
                                 </button>
                             </div>
 
-                            <p className='text-center text-2xl mt-8'>Search Doctor by Health Condition</p>
+                            <p className='text-center md:text-2xl text-lg mt-8'>Search Doctor by Health Condition</p>
                         </div>
-                        < div className='h-px w-[45%] bg-[#E7E7E7] mt-4 mx-2' >
-                            <p className='text-[#E7E7E7] font-light w-[65%] text-[0.9rem] pt-4 pl-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                        < div className='h-px md:w-[45%] w-[60%] bg-[#E7E7E7] mt-4 mx-2' >
+                            <p className='text-[#E7E7E7] font-light md:w-[65%] w-full md:text-[0.9rem] text-[0.65rem] pt-4 md:pl-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
                         </div >
                     </div>
                     <Marquee speed={70} pauseOnHover style={{ position: 'absolute', top: '7rem' }} >
 
                         <Link to="/MentalHealth">
-                            <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
-                                <img src={chairBubble} className='w-[4rem]' alt="" />
+                            <div className='md:mx-14 mx-4 p-5 bg-[#C09B4F] w-fit rounded-full'>
+                                <img src={chairBubble} className='md:w-[4rem] w-[1.8rem]' alt="" />
                             </div>
                         </Link>
 
                         <Link to='/SkinCondition' >
-                            <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
-                                <img src={girlBubble} className='w-[4rem]' alt="" />
+                            <div className='md:mx-14 mx-4 p-5 bg-[#C09B4F] w-fit rounded-full'>
+                                <img src={girlBubble} className='md:w-[4rem] w-[1.8rem]' alt="" />
                             </div>
                         </Link>
 
                         <Link to="/SexualHealth" >
-                        <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
-                            <img src={personBubble} className='w-[4rem]' alt="" />
-                        </div>
-                        </Link>
-
-                        <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
-                            <img src={boneBubble} className='w-[4rem]' alt="" />
-                        </div>
-
-                        <Link to="/Digestive">
-                            <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
-                                <img src={manBubble} className='w-[4rem]' alt="" />
+                            <div className='md:mx-14 mx-4 p-5 bg-[#C09B4F] w-fit rounded-full'>
+                                <img src={personBubble} className='md:w-[4rem] w-[1.8rem]' alt="" />
                             </div>
                         </Link>
 
-                        <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
-                            <img src={microscopeBubble} className='w-[4rem]' alt="" />
+                        <div className='md:mx-14 mx-4 p-5 bg-[#C09B4F] w-fit rounded-full'>
+                            <img src={boneBubble} className='md:w-[4rem] w-[1.8rem]' alt="" />
                         </div>
-                        <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
-                            <img src={keyBubble} className='w-[4rem]' alt="" />
+
+                        <Link to="/Digestive">
+                            <div className='md:mx-14 mx-4 p-5 bg-[#C09B4F] w-fit rounded-full'>
+                                <img src={manBubble} className='md:w-[4rem] w-[1.8rem]' alt="" />
+                            </div>
+                        </Link>
+
+                        <div className='md:mx-14 mx-4 p-5 bg-[#C09B4F] w-fit rounded-full'>
+                            <img src={microscopeBubble} className='md:w-[4rem] w-[1.8rem]' alt="" />
                         </div>
-                        <div className='mx-14 p-5 bg-[#C09B4F] w-fit rounded-full'>
-                            <img src={eyeBubble} className='w-[4rem]' alt="" />
+                        <div className='md:mx-14 mx-4 p-5 bg-[#C09B4F] w-fit rounded-full'>
+                            <img src={keyBubble} className='md:w-[4rem] w-[1.8rem]' alt="" />
+                        </div>
+                        <div className='md:mx-14 mx-4 p-5 bg-[#C09B4F] w-fit rounded-full'>
+                            <img src={eyeBubble} className='md:w-[4rem] w-[1.8rem]' alt="" />
                         </div>
                     </Marquee>
+                    
                 </div>
 
 

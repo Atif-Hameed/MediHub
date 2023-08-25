@@ -28,10 +28,10 @@ const ContactUs = () => {
                             <div>
                                 <h1 className='text-[4rem] font-semibold leading-[5rem]'>The Best Medical Care You Can Get!</h1>
 
-                                <Link to="/AvailableDoctors">
+                                <Link to="/AppointBoking">
                                     <button style={{ boxShadow: ' 2px 8px 6px 0px #00000040' }} className='mt-8 py-4 px-20 rounded-lg text-lg font-medium  bg-[#181818] hover:bg-[#000] w-fit self-center hover:text-[#d79949]'>Make Appointment</button>
                                 </Link>
-                                
+
                             </div>
                             <div>
                                 <div className='bg-white px-10 py-6 pb-8 rounded-xl'>
@@ -49,7 +49,9 @@ const ContactUs = () => {
                                     <textarea name="" id="" cols="30" rows="7" className='text-black text-xl pl-4 rounded-lg bg-[#1818184D] w-full'></textarea>
 
                                     <div className='w-full flex justify-end mt-4'>
-                                        <button className='font-medium  bg-[#181818] hover:bg-[#000] hover:text-[#d79949] py-4 px-16 self-end rounded-lg' >Continue</button>
+                                        <Link to="/AvailableDoctors" >
+                                            <button className='font-medium  bg-[#181818] hover:bg-[#000] hover:text-[#d79949] py-4 px-16 self-end rounded-lg' >Continue</button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

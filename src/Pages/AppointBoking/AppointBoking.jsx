@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import Navbar from '../../Components/Navbar'
 import profilePhoto from '../../Assets/profilePhoto.svg'
 import greenTick from '../../Assets/greenTick.svg'
-import greenThumb from '../../Assets/greenThumb.svg'
+import longShadesBg from '../../Assets/longShadesBg.svg'
 import { GrPrevious } from 'react-icons/gr';
 import { GrNext } from 'react-icons/gr';
+import { IoMdAdd } from 'react-icons/io';
 import Slider from 'react-slick';
 import TabsContent from './TabsContent';
 import DoctorReviews from './DoctorReviews'
@@ -30,12 +31,18 @@ const AppointBoking = () => {
 
     return (
         <>
-            <div>
+            <div style={{
+                backgroundImage: `url(${longShadesBg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                width: '100%',
+                height: '100%'
+            }}>
                 <Navbar />
 
-                <div className='w-full px-24'>
+                <div className='w-full h-full px-24'>
 
-                    <div className='bg-[#D9D9D9] px-8 py-10 rounded-2xl mt-10' >
+                    <div className='bg-[#D9D9D9] px-8 py-10 pb-36 rounded-t-2xl mt-10' >
 
                         <div className='bg-[#E7E7E7] px-14 py-5 mt-8 rounded-lg' style={{ boxShadow: '0px 4px 8px 0px #00000040' }}>
                             <div className='flex justify-between items-start'>
@@ -147,7 +154,12 @@ const AppointBoking = () => {
                             </div>
                         </div>
 
-                        <DoctorReviews/>
+                        <DoctorReviews />
+
+                        <div className='flex justify-between items-center mt-12'>
+                            <h1 className='text-black text-[1.5rem]'>Doctors in other regions</h1>
+                            <IoMdAdd className='text-black text-2xl ' />
+                        </div>
 
                     </div>
                 </div>
