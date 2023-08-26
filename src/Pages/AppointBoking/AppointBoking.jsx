@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Navbar from '../../Components/Navbar'
 import profilePhoto from '../../Assets/profilePhoto.svg'
 import greenTick from '../../Assets/greenTick.svg'
@@ -10,6 +12,27 @@ import Slider from 'react-slick';
 import TabsContent from './TabsContent';
 import DoctorReviews from './DoctorReviews'
 
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "none"  }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "none"  }}
+        onClick={onClick}
+      />
+    );
+  }
 
 const AppointBoking = () => {
 
@@ -20,7 +43,32 @@ const AppointBoking = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         nextArrow: <GrNext />,
-        prevArrow: <GrPrevious />
+        prevArrow: <GrPrevious />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    nextArrow: <SampleNextArrow/>,
+                    prevArrow: <SamplePrevArrow/>,
+                }
+            }
+        ]
     };
 
     const [activeTab, setActiveTab] = useState(1);
@@ -40,22 +88,22 @@ const AppointBoking = () => {
             }}>
                 <Navbar />
 
-                <div className='w-full h-full px-24'>
+                <div className='w-full h-full md:px-24 px-6'>
 
-                    <div className='bg-[#D9D9D9] px-8 py-10 pb-36 rounded-t-2xl mt-10' >
+                    <div className='bg-[#D9D9D9] md:px-8 px-4 md:py-10 py-4 md:pb-36 pb-16 rounded-t-2xl mt-10' >
 
-                        <div className='bg-[#E7E7E7] px-14 py-5 mt-8 rounded-lg' style={{ boxShadow: '0px 4px 8px 0px #00000040' }}>
+                        <div className='bg-[#E7E7E7] md:px-14 px-3 md:py-5 py-3 mt-8 rounded-lg' style={{ boxShadow: '0px 4px 8px 0px #00000040' }}>
                             <div className='flex justify-between items-start'>
-                                <div className='flex gap-3 items-center'>
+                                <div className='flex md:gap-3 gap-2 items-center'>
                                     <div>
-                                        <img src={profilePhoto} className='w-[9rem]' alt="" />
+                                        <img src={profilePhoto} className='md:w-[9rem] w-[5.6rem]' alt="" />
                                     </div>
                                     <div>
-                                        <h1 className='text-[1.3rem] text-black font-medium'>Assist. Prof. Dr. Jane Doe</h1>
+                                        <h1 className='md:text-[1.3rem] text-[0.98rem] text-black md:font-medium font-semibold'>Assist. Prof. Dr. Jane Doe</h1>
 
                                         <div className='flex items-center gap-2'>
-                                            <p className='mt-1 text-[0.8rem] text-black'>Clinic Name Here</p>
-                                            <p className='mt-1 text-[0.85rem] font-medium text-black underline'>Change Clinic</p>
+                                            <p className='mt-1 md:text-[0.8rem] text-[0.75rem] text-black'>Clinic Name Here</p>
+                                            <p className='mt-1 md:text-[0.85rem] text-[0.7rem] font-medium text-black underline'>Change Clinic</p>
                                         </div>
 
                                         <p className='mt-2 text-[0.95rem] font-medium text-black'>Fee: Rs. 3,000 PKR</p>
@@ -68,53 +116,53 @@ const AppointBoking = () => {
 
                         <div className='relative w-full '>
 
-                            <div className='h-px w-full bg-[#CCCCCC] z-30 top-[4.92rem] absolute' ></div>
+                            <div className='h-px w-full bg-[#CCCCCC] z-30 md:top-[4.92rem] top-[4.7rem] absolute' ></div>
 
-                            <div className='relative bg-[#E7E7E7] px-12 py-5 mt-8 rounded-lg' style={{ boxShadow: '0px 4px 8px 0px #00000040' }}>
+                            <div className='relative bg-[#E7E7E7] md:px-12 px-4 py-5 mt-8 rounded-lg' style={{ boxShadow: '0px 4px 8px 0px #00000040' }}>
 
-                                <Slider {...settings} className='w-full px-20 z-50'>
-                                    <div className='px-16'>
-                                        <div onClick={() => { handleTabClick(1) }} className={`w-fit flex justify-center items-center cursor-pointer px-5 py-4 ${activeTab === 1 ? 'border-b-4   border-[#FFB45E]' : 'border-0'} `}>
-                                            <p className={`text-black font-medium text-center ${activeTab === 1 ? 'text-[#FFB45E]' : 'text-black'}`} >Today, 18</p>
-                                        </div>
-                                    </div>
-
-                                    <div className='px-16'>
-                                        <div onClick={() => { handleTabClick(2) }} className={`w-fit flex justify-center items-center cursor-pointer px-5 py-4 ${activeTab === 2 ? 'border-b-4   border-[#FFB45E]' : 'border-0'} `}>
-                                            <p className={`text-black font-medium text-center ${activeTab === 2 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 15</p>
+                                <Slider {...settings} className='w-full md:px-20 z-50'>
+                                    <div className='md:px-16'>
+                                        <div onClick={() => { handleTabClick(1) }} className={`w-fit flex justify-center items-center cursor-pointer md:px-5 px-1 py-4 ${activeTab === 1 ? 'md:border-b-4 border-b-[3px]   border-[#FFB45E]' : 'border-0'} `}>
+                                            <p className={`text-black font-medium text-center md:text-md text-[0.8rem] ${activeTab === 1 ? 'text-[#FFB45E]' : 'text-black'}`} >Today, 18</p>
                                         </div>
                                     </div>
 
-                                    <div className='px-16'>
-                                        <div onClick={() => { handleTabClick(3) }} className={`w-fit flex justify-center items-center cursor-pointer px-5 py-4 ${activeTab === 3 ? 'border-b-4   border-[#FFB45E]' : 'border-0'} `}>
-                                            <p className={`text-black font-medium text-center ${activeTab === 3 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 16</p>
+                                    <div className='md:px-16'>
+                                        <div onClick={() => { handleTabClick(2) }} className={`w-fit flex justify-center items-center cursor-pointer md:px-5 px-3 py-4 ${activeTab === 2 ? 'md:border-b-4 border-b-[3px]   border-[#FFB45E]' : 'border-0'} `}>
+                                            <p className={`text-black font-medium text-center md:text-md text-[0.8rem] ${activeTab === 2 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 15</p>
                                         </div>
                                     </div>
 
-                                    <div className='px-16'>
-                                        <div onClick={() => { handleTabClick(4) }} className={`w-fit flex justify-center items-center cursor-pointer px-5 py-4 ${activeTab === 4 ? 'border-b-4   border-[#FFB45E]' : 'border-0'} `}>
-                                            <p className={`text-black font-medium text-center ${activeTab === 4 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 17</p>
+                                    <div className='md:px-16'>
+                                        <div onClick={() => { handleTabClick(3) }} className={`w-fit flex justify-center items-center cursor-pointer md:px-5 px-3 py-4 ${activeTab === 3 ? 'md:border-b-4 border-b-[3px]   border-[#FFB45E]' : 'border-0'} `}>
+                                            <p className={`text-black font-medium text-center md:text-md text-[0.8rem] ${activeTab === 3 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 16</p>
                                         </div>
                                     </div>
 
-                                    <div className='px-16'>
-                                        <div onClick={() => { handleTabClick(1) }} className={`w-fit flex justify-center items-center cursor-pointer px-5 py-4 ${activeTab === 1 ? 'border-b-4   border-[#FFB45E]' : 'border-0'} `}>
-                                            <p className={`text-black font-medium text-center ${activeTab === 1 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 18</p>
+                                    <div className='md:px-16'>
+                                        <div onClick={() => { handleTabClick(4) }} className={`w-fit flex justify-center items-center cursor-pointer md:px-5 px-3 py-4 ${activeTab === 4 ? 'md:border-b-4 border-b-[3px]   border-[#FFB45E]' : 'border-0'} `}>
+                                            <p className={`text-black font-medium text-center md:text-md text-[0.8rem] ${activeTab === 4 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 17</p>
                                         </div>
                                     </div>
-                                    <div className='px-16'>
-                                        <div onClick={() => { handleTabClick(2) }} className={`w-fit flex justify-center items-center cursor-pointer px-5 py-4 ${activeTab === 2 ? 'border-b-4   border-[#FFB45E]' : 'border-0'} `}>
-                                            <p className={`text-black font-medium text-center ${activeTab === 2 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 19</p>
+
+                                    <div className='md:px-16'>
+                                        <div onClick={() => { handleTabClick(1) }} className={`w-fit flex justify-center items-center cursor-pointer md:px-5 px-3 py-4 ${activeTab === 1 ? 'md:border-b-4 border-b-[3px]   border-[#FFB45E]' : 'border-0'} `}>
+                                            <p className={`text-black font-medium text-center md:text-md text-[0.8rem] ${activeTab === 1 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 18</p>
                                         </div>
                                     </div>
-                                    <div className='px-16'>
-                                        <div onClick={() => { handleTabClick(3) }} className={`w-fit flex justify-center items-center cursor-pointer px-5 py-4 ${activeTab === 3 ? 'border-b-4   border-[#FFB45E]' : 'border-0'} `}>
-                                            <p className={`text-black font-medium text-center ${activeTab === 3 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 20</p>
+                                    <div className='md:px-16'>
+                                        <div onClick={() => { handleTabClick(2) }} className={`w-fit flex justify-center items-center cursor-pointer md:px-5 px-3 py-4 ${activeTab === 2 ? 'md:border-b-4 border-b-[3px]   border-[#FFB45E]' : 'border-0'} `}>
+                                            <p className={`text-black font-medium text-center md:text-md text-[0.8rem] ${activeTab === 2 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 19</p>
                                         </div>
                                     </div>
-                                    <div className='px-16'>
-                                        <div onClick={() => { handleTabClick(4) }} className={`w-fit flex justify-center items-center cursor-pointer px-5 py-4 ${activeTab === 4 ? 'border-b-4   border-[#FFB45E]' : 'border-0'} `}>
-                                            <p className={`text-black font-medium text-center ${activeTab === 4 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 21</p>
+                                    <div className='md:px-16'>
+                                        <div onClick={() => { handleTabClick(3) }} className={`w-fit flex justify-center items-center cursor-pointer md:px-5 px-3 py-4 ${activeTab === 3 ? 'md:border-b-4 border-b-[3px]   border-[#FFB45E]' : 'border-0'} `}>
+                                            <p className={`text-black font-medium text-center md:text-md text-[0.8rem] ${activeTab === 3 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 20</p>
+                                        </div>
+                                    </div>
+                                    <div className='md:px-16'>
+                                        <div onClick={() => { handleTabClick(4) }} className={`w-fit flex justify-center items-center cursor-pointer md:px-5 px-3 py-4 ${activeTab === 4 ? 'md:border-b-4 border-b-[3px]   border-[#FFB45E]' : 'border-0'} `}>
+                                            <p className={`text-black font-medium text-center md:text-md text-[0.8rem] ${activeTab === 4 ? 'text-[#FFB45E]' : 'text-black'}`} >Jan, 21</p>
                                         </div>
                                     </div>
                                 </Slider>
@@ -146,11 +194,11 @@ const AppointBoking = () => {
                         </div>
 
 
-                        <div className='flex items-center gap-10 px-10 my-20'>
-                            <img src={greenTick} className='w-[7rem]' alt="" />
+                        <div className='flex md:flex-row flex-col items-center md:gap-10 gap-5 md:px-10 px-0 md:my-20 my-12'>
+                            <img src={greenTick} className='md:w-[7rem] w-[9rem]' alt="" />
                             <div>
-                                <h1 className='text-[1.85rem] text-black font-medium'>95% patients feel satisfied after booking appointment from MediHub</h1>
-                                <p className='text-black'>It takes only 30 sec to book an appointment</p>
+                                <h1 className='md:text-[1.85rem] text-2xl text-black font-medium'>95% patients feel satisfied after booking appointment from MediHub</h1>
+                                <p className='text-black md:text-md text-sm'>It takes only 30 sec to book an appointment</p>
                             </div>
                         </div>
 

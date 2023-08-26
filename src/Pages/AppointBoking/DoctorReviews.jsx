@@ -4,17 +4,17 @@ import greenThumb from '../../Assets/greenThumb.svg'
 const Reviews = (props) => {
     return (
         <>
-            <div className='px-6 py-4 border-2 border-[#CCCCCC] rounded-lg mt-8 ml-1'>
-                <div className='flex items-start gap-4'>
+            <div className='md:px-6 px-3 md:py-4 py-3 border-2 border-[#CCCCCC] rounded-lg mt-8 ml-1'>
+                <div className='flex items-start md:gap-4 gap-2'>
                     <img src={greenThumb} alt="" />
-                    <div className='flex flex-col gap-8'>
+                    <div className='flex flex-col md:gap-8 gap-6'>
                         <div className='flex flex-col'>
-                            <h1 className='text-black text-2xl font-medium'>I recommend the doctor</h1>
-                            <p className='text-black text-lg mt-2'>
+                            <h1 className='text-black md:text-2xl text-[1.16rem] font-medium'>I recommend the doctor</h1>
+                            <p className='text-black md:text-lg text-sm mt-2'>
                                 {props.des}
                             </p>
                         </div>
-                        <p className='text-[#C2C2C2]'>Verified Patient U** ***i . 6 months ago</p>
+                        <p className='text-[#C2C2C2] md:text-md text-sm'>Verified Patient U** ***i . 6 months ago</p>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@ const DoctorReviews = () => {
 
     return (
         <>
-            <div className='relative bg-[#E7E7E7] px-12 py-5 mt-8 rounded-lg' style={{ boxShadow: '0px 4px 8px 0px #00000040' }}>
+            <div className='relative bg-[#E7E7E7] md:px-12 px-4 py-5 mt-8 rounded-lg' style={{ boxShadow: '0px 4px 8px 0px #00000040' }}>
                 <h1 className='text-black text-[1.5rem] font-medium mt-4 mb-14'>Reviews About Dr. John Doe</h1>
 
                 <Reviews

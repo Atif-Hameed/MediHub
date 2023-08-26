@@ -9,13 +9,13 @@ const Navbar = () => {
                 <div className='flex flex-col gap-2 w-full'>
                    
                     <Link to="/">
-                        <p className='text-white hover:text-[#d79949] cursor-pointer'>Home</p>
+                        <p className='text-white hover:text-[#d79949] cursor-pointer md:text-md text-sm'>Home</p>
                     </Link>
 
-                    <div className='h-[0.11rem] rounded bg-white w-3/4'></div>
+                    <div className='h-[0.11rem] rounded bg-white md:w-3/4 w-[90%]'></div>
                    
                     <Link to="/SkinCondition" >
-                        <p className='text-white hover:text-[#d79949] cursor-pointer'>Services</p>
+                        <p className='text-white hover:text-[#d79949] cursor-pointer md:text-md text-sm'>Services</p>
                     </Link>
                 </div>
 
@@ -28,13 +28,13 @@ const Navbar = () => {
                 <div className='flex flex-col gap-2 w-full'>
 
                     <Link to="/AboutUs" className='self-end'>
-                        <p className=' text-white self-end hover:text-[#d79949] cursor-pointer'>About Us</p>
+                        <p className=' text-white self-end hover:text-[#d79949] cursor-pointer md:text-md text-sm'>About Us</p>
                     </Link>
 
-                    <div className='h-[0.11rem] rounded bg-white w-3/4 self-end'></div>
+                    <div className='h-[0.11rem] rounded bg-white md:w-3/4 w-[90%] self-end'></div>
 
                     <Link to="/ContactUs" className='self-end'>
-                        <p className='text-white self-end hover:text-[#d79949] cursor-pointer'>Contact Us</p>
+                        <p className='text-white self-end hover:text-[#d79949] cursor-pointer md:text-md text-sm'>Contact Us</p>
                     </Link>
                 </div>
             </div>

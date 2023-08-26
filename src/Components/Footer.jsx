@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <>
-            <div className='h-[25.5rem] w-full mt-40'>
+            <div className='h-[25.5rem] w-full md:mt-40 mt-24'>
                 <div className='flex justify-around items-center'
                     style={{
                         backgroundImage: `url(${footerBg})`,
@@ -16,29 +16,29 @@ const Footer = () => {
                         backgroundPosition: 'center',
                     }}>
 
-                    <div className='flex justify-around w-full'>
+                    <div className='flex md:flex-row flex-col md:items-start items-center justify-around w-full'>
                         <Link to="/">
-                            <img src={mainLogo} className='w-[24rem]' alt="" />
+                            <img src={mainLogo} className='md:w-[24rem] w-[12rem]' alt="" />
                         </Link>
 
-                        <div className='flex gap-48'>
+                        <div className='flex md:gap-48 justify-around w-full px-4 md:mt-0 mt-8'>
 
-                            <ul className='gap-5 flex flex-col'>
-                                <li className='cursor-pointer text-[1.2rem] font-thin hover:text-[#d79949]'>Ask a doctor online</li>
-                                <li className='cursor-pointer text-[1.2rem] font-thin hover:text-[#d79949]'>Chat with a doctor</li>
-                                <li className='cursor-pointer text-[1.2rem] font-thin hover:text-[#d79949]'>Phone a doctor</li>
-                                <li className='cursor-pointer text-[1.2rem] font-thin hover:text-[#d79949]'>Video Conversation</li>
-                                <li className='cursor-pointer text-[1.2rem] font-thin hover:text-[#d79949]'>Physician Directory</li>
-                                <li className='cursor-pointer text-[1.2rem] font-thin hover:text-[#d79949]'>Articles</li>
+                            <ul className='md:gap-5 gap-3 flex flex-col'>
+                                <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>Ask a doctor online</li>
+                                <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>Chat with a doctor</li>
+                                <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>Phone a doctor</li>
+                                <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>Video Conversation</li>
+                                <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>Physician Directory</li>
+                                <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>Articles</li>
                             </ul>
 
-                            <ul className='gap-5 flex flex-col'>
-                                <li className='cursor-pointer text-[1.2rem] font-thin hover:text-[#d79949]'>Tools</li>
-                                <li className='cursor-pointer text-[1.2rem] font-thin hover:text-[#d79949]'>Blogs</li>
-                                <li className='cursor-pointer text-[1.2rem] font-thin hover:text-[#d79949]'>About Us</li>
-                                <li className='cursor-pointer text-[1.2rem] font-thin hover:text-[#d79949]'>Terms</li>
-                                <li className='cursor-pointer text-[1.2rem] font-thin hover:text-[#d79949]'>Privacy</li>
-                                <li className='cursor-pointer text-[1.2rem] font-thin hover:text-[#d79949]'>Get MediHub App</li>
+                            <ul className='md:gap-5 gap-3 flex flex-col'>
+                                <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>Tools</li>
+                                <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>Blogs</li>
+                                <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>About Us</li>
+                                <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>Terms</li>
+                                <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>Privacy</li>
+                                <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>Get MediHub App</li>
                             </ul>
                         </div>
                     </div>

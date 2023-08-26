@@ -16,13 +16,13 @@ const Digestive = () => {
                 />
 
                 <Questions
-                    question1="What are skin conditions?"
+                    question1="What are digestive problems?"
                     des1="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus"
                     
-                    question2="What are the common signs?"
+                    question2="How common are digestive problems?"
                     des2="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident."
                     
-                    question3="What forms of skin condition are there??"
+                    question3="Types of digestive problems"
                     des3="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident."
                 />
 

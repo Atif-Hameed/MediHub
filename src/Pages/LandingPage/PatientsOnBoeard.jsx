@@ -34,7 +34,10 @@ const PatientsOnBoeard = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    dots:false
+                    dots: false,
+                    autoplay: true,
+                    speed: 1500,
+                    autoplaySpeed: 1000,
                 },
             },
         ]

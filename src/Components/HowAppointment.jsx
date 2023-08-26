@@ -4,16 +4,16 @@ import mobile from '../Assets/mobilePhoto.svg'
 const HowAppointment = () => {
     return (
         <>
-            <div className='flex px-40 justify-between items-start mt-24'>
-                <div className='w-1/2  flex justify-center'>
-                    <div className=' w-1/2 flex flex-col justify-center items-center gap-8 '>
-                        <h1 className='text-[3rem] font-semibold'>Here’s how to book an appointment:</h1>
-                        <img src={mobile} className='w-full mr-10' alt="" />
+            <div className='flex md:flex-row flex-col md:px-40 px-8 md:gap-0 gap-4 justify-between items-start mt-24'>
+                <div className='md:w-1/2  flex justify-center'>
+                    <div className=' md:w-1/2 flex flex-col justify-center items-center md:gap-8 gap-4 '>
+                        <h1 className='md:text-[3rem] text-4xl font-semibold'>Here’s how to book an appointment:</h1>
+                        <img src={mobile} className='w-3/4 mr-10' alt="" />
                     </div>
                 </div>
 
-                <div className='w-1/2 flex justify-center'>
-                    <div className='w-[58%] border border-white rounded-lg flex flex-col justify-center gap-10 p-8'>
+                <div className='md:w-1/2 flex justify-center'>
+                    <div className='md:w-[58%] border border-white rounded-lg flex flex-col justify-center md:gap-10 gap-6 p-8'>
 
                         <h1 className='text-3xl font-semibold'>Step 1</h1>
                         <p className='text-sm font-light'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem reru.</p>
@@ -28,8 +28,8 @@ const HowAppointment = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-center my-20'>
-                <div className='h-px w-[40%] bg-white'></div>
+            <div className='flex justify-center md:my-20 my-16'>
+                <div className='h-px md:w-[40%] w-3/4 bg-white'></div>
             </div>
         </>
     )
