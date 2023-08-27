@@ -27,7 +27,7 @@ const PlatinumDoctor = () => {
                     </div>
                 </div>
                 <div className='flex md:gap-4 items-center md:mt-6 mt-4'>
-                    <p className='md:text-md text-[0.75rem]'>Book Appointment</p>
+                    <p className='md:text-base text-[0.75rem]'>Book Appointment</p>
                     <MdArrowForwardIos className='text-white ' />
                 </div>
             </div>

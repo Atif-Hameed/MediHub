@@ -64,7 +64,7 @@ const AvailableDoctors = () => {
 
                     <div className='bg-[#D9D9D9] md:px-8 px-4 md:py-10 py-4 rounded-t-2xl mt-10' >
 
-                        <div className='md:flex hidden text-black items-center md:text-md text-[0.7rem] gap-1'>
+                        <div className='md:flex hidden text-black items-center md:text-base text-[0.7rem] gap-1'>
                             <p className='md:text-sm text-[0.7rem]'>HOME</p>
                             <MdArrowForwardIos className='text-white md:text-md text-[0.7rem]' />
                             <p className='md:text-sm text-[0.7rem]'>PAKISTAN</p>
@@ -86,7 +86,7 @@ const AvailableDoctors = () => {
                         </div>
 
                         <h1 className='md:text-[2.4rem] text-3xl text-black font-medium mt-4'>680 Best Gynecologists in Lahore</h1>
-                        <p className='md:text-lg text-sm text-black'>Also known as Female Health Specialist, OB-GYN or Women Health Specialist</p>
+                        <p className='md:text-lg md:mt-4 text-sm text-black'>Also known as Female Health Specialist, OB-GYN or Women Health Specialist</p>
 
                         <div className='grid md:grid-cols-6 grid-cols-3 md:gap-4 gap-3 md:mt-12 mt-8'>
 
@@ -95,7 +95,7 @@ const AvailableDoctors = () => {
                                     <img src={docLoc} className='md:w-2/3 w-full' alt="" />
                                 </div>
                                 <div className='w-[75%]  p-2 md:px-4 px-2'>
-                                    <p className='text-black md:text-md text-[0.75rem] font-medium' >Doctors Near Me</p>
+                                    <p className='text-black md:text-base text-[0.75rem] font-medium' >Doctors Near Me</p>
                                 </div>
                             </div>
 
@@ -104,7 +104,7 @@ const AvailableDoctors = () => {
                                     <img src={docCash} className='md:w-2/3 w-full' alt="" />
                                 </div>
                                 <div className='w-[75%]  p-2 md:px-4 px-2'>
-                                    <p className='text-black md:text-md text-[0.75rem] font-medium' >Lowest Fee</p>
+                                    <p className='text-black md:text-base text-[0.75rem] font-medium' >Lowest Fee</p>
                                 </div>
                             </div>
 
@@ -113,7 +113,7 @@ const AvailableDoctors = () => {
                                     <img src={docStar} className='md:w-2/3 w-full' alt="" />
                                 </div>
                                 <div className='w-[75%]  p-2 md:px-4 px-2'>
-                                    <p className='text-black md:text-md text-[0.75rem] font-medium' >Most Reviewed</p>
+                                    <p className='text-black md:text-base text-[0.75rem] font-medium' >Most Reviewed</p>
                                 </div>
                             </div>
 
@@ -122,7 +122,7 @@ const AvailableDoctors = () => {
                                     <img src={docStarSquare} className='md:w-2/3 w-full' alt="" />
                                 </div>
                                 <div className='w-[75%]  p-2 md:px-4 px-2'>
-                                    <p className='text-black md:text-md text-[0.75rem] font-medium' >Most Experienced</p>
+                                    <p className='text-black md:text-base text-[0.75rem] font-medium' >Most Experienced</p>
                                 </div>
                             </div>
 
@@ -131,7 +131,7 @@ const AvailableDoctors = () => {
                                     <img src={docTime} className='md:w-2/3 w-full' alt="" />
                                 </div>
                                 <div className='w-[75%]  p-2 md:px-4 px-2'>
-                                    <p className='text-black md:text-md text-[0.75rem] font-medium' >Available Today</p>
+                                    <p className='text-black md:text-base text-[0.75rem] font-medium' >Available Today</p>
                                 </div>
                             </div>
 
@@ -140,7 +140,7 @@ const AvailableDoctors = () => {
                                     <img src={docFemale} className='md:w-2/3 w-full' alt="" />
                                 </div>
                                 <div className='w-[75%]  p-2 md:px-4 px-2'>
-                                    <p className='text-black md:text-md text-[0.75rem] font-medium' >Female Doctors</p>
+                                    <p className='text-black md:text-base text-[0.75rem] font-medium' >Female Doctors</p>
                                 </div>
                             </div>
                         </div>
@@ -152,7 +152,7 @@ const AvailableDoctors = () => {
                             <div className='flex items-center justify-between'>
                                 <div className='flex items-center md:gap-3 gap-1.5'>
                                     <img src={crown} className='w-[1.7rem]' alt="" />
-                                    <h1 className='md:text-[1.6rem] text-md uppercase text-black font-medium'>Platinum Doctors</h1>
+                                    <h1 className='md:text-[1.6rem] text-base uppercase text-black font-medium'>Platinum Doctors</h1>
                                 </div>
                                 <p onClick={handleShow} className='cursor-pointer text-black underline md:text-xl text-sm' >
                                     {show ? 'View Less' : 'View All'}
@@ -170,7 +170,7 @@ const AvailableDoctors = () => {
                                 <PlatinumDoctor />
 
                             </div>
-                            <div className={`grid grid-cols-4 gap-6 mt-6 ${show ? 'block' : 'hidden'} `}>
+                            <div className={`grid md:grid-cols-4 grid-cols-2 md:gap-6 gap-3 mt-6 ${show ? 'block' : 'hidden'} `}>
 
                                 <PlatinumDoctor />
 

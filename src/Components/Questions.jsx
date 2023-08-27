@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Questions = (props) => {
     return (
@@ -34,9 +35,9 @@ const Questions = (props) => {
                     </p>
                 </div>
 
-
-                <button className='md:mt-8 mt-4 md:py-4 py-3 md:px-32 px-16 bg-[#C09B4F] hover:bg-[#947335] rounded-lg text-[#181818] hover:text-white transition-all font-medium text-lg'>Book Now</button>
-
+                <Link to="/ContactUs" >
+                    <button className='md:mt-8 mt-4 md:py-4 py-3 md:px-32 px-16 bg-[#C09B4F] hover:bg-[#947335] rounded-lg text-[#181818] hover:text-white transition-all font-medium text-lg'>Book Now</button>
+                </Link>
                 <div className='md:mt-4 mt-2 h-px md:w-[34%] w-3/4 bg-white '></div>
             </div>
         </>

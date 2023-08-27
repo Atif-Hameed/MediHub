@@ -9,7 +9,7 @@ const QuestionsSmall = (props) => {
                     <h1 className='md:text-3xl text-2xl font-semibold md:w-[36.5%]'>
                         {props.question1}
                     </h1>
-                    <p className='font-thin md:text-md text-[0.8rem] md:w-[35%]'>
+                    <p className='font-thin md:text-lg text-[0.8rem] md:w-[35%]'>
                         {props.des1}
                     </p>
                 </div>
@@ -18,7 +18,7 @@ const QuestionsSmall = (props) => {
                     <h1 className='md:text-3xl text-2xl font-semibold md:w-[36.5%]'>
                         {props.question2}
                     </h1>
-                    <p className='font-thin md:text-md text-[0.8rem] md:w-[35%]'>
+                    <p className='font-thin md:text-lg text-[0.8rem] md:w-[35%]'>
                         {props.des2}
                     </p>
                 </div>
@@ -27,7 +27,7 @@ const QuestionsSmall = (props) => {
                     <h1 className='md:text-3xl text-2xl font-semibold md:w-[36.5%]'>
                         {props.question3}
                     </h1>
-                    <p className='font-thin md:text-md text-[0.8rem] md:w-[35%]'>
+                    <p className='font-thin md:text-lg text-[0.8rem] md:w-[35%]'>
                         {props.des3}
                     </p>
                 </div>
@@ -36,7 +36,7 @@ const QuestionsSmall = (props) => {
                     <h1 className='md:text-3xl text-2xl font-semibold md:w-[36.5%]'>
                         {props.question4}
                     </h1>
-                    <p className='font-thin md:text-md text-[0.8rem] md:w-[35%]'>
+                    <p className='font-thin md:text-lg text-[0.8rem] md:w-[35%]'>
                         {props.des4}
                     </p>
                 </div>

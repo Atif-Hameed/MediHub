@@ -6,9 +6,9 @@ const HowAppointment = () => {
         <>
             <div className='flex md:flex-row flex-col md:px-40 px-8 md:gap-0 gap-4 justify-between items-start mt-24'>
                 <div className='md:w-1/2  flex justify-center'>
-                    <div className=' md:w-1/2 flex flex-col justify-center items-center md:gap-8 gap-4 '>
-                        <h1 className='md:text-[3rem] text-4xl font-semibold'>Here’s how to book an appointment:</h1>
-                        <img src={mobile} className='w-3/4 mr-10' alt="" />
+                    <div className=' md:w-1/2 flex flex-col justify-center items-center md:gap-12 gap-4 '>
+                        <h1 className='md:text-[3rem] md:leading-[3.5rem] text-4xl font-semibold'>Here’s how to book an appointment:</h1>
+                        <img src={mobile} className='md:w-full w-3/4 mr-10' alt="" />
                     </div>
                 </div>
 

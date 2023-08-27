@@ -16,12 +16,12 @@ const Footer = () => {
                         backgroundPosition: 'center',
                     }}>
 
-                    <div className='flex md:flex-row flex-col md:items-start items-center justify-around w-full'>
+                    <div className='flex md:flex-row flex-col items-center justify-around w-full'>
                         <Link to="/">
                             <img src={mainLogo} className='md:w-[24rem] w-[12rem]' alt="" />
                         </Link>
 
-                        <div className='flex md:gap-48 justify-around w-full px-4 md:mt-0 mt-8'>
+                        <div className='flex md:gap-64 md:justify-normal md:w-auto w-full justify-around  px-4 md:mt-0 mt-8'>
 
                             <ul className='md:gap-5 gap-3 flex flex-col'>
                                 <li className='cursor-pointer md:text-[1.2rem] text-[0.9rem] font-thin hover:text-[#d79949]'>Ask a doctor online</li>
@@ -42,7 +42,6 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
         </>

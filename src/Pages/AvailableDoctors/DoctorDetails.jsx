@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import triangle from '../../Assets/trianle.svg'
 import videoIcon from '../../Assets/videoIcon.svg'
 import profilePhoto from '../../Assets/profilePhoto.svg'
@@ -7,7 +7,45 @@ import { Link } from 'react-router-dom';
 
 const DoctorDetails = () => {
 
-    // const [showPopUp, setShowPopUp] = useState(false)
+    const [showPopUp, setShowPopUp] = useState(false)
+
+    const openShowPopUp = () => {
+        setShowPopUp(true)
+    }
+    const closeShowPopUp = () => {
+        setShowPopUp(false)
+    }
+
+    useEffect( () => {
+        if(showPopUp){
+            document.body.classList.add("overflow-hidden")
+        }
+        else{
+            document.body.classList.remove("overflow-hidden")
+        }
+
+        return () => {
+            document.body.classList.remove("overflow-hidden")
+        }
+    },[showPopUp] )
+
+    const divRef = useRef(null)
+
+    useEffect( () => {
+
+        const handleClickOutside = (event) => {
+            if(divRef.current && !divRef.current.contains(event.target)){
+                setShowPopUp(false)
+            }
+
+            document.addEventListener("mousedown", handleClickOutside)
+
+            return () => {
+                document.removeEventListener("mousedown", handleClickOutside)
+            }
+        }
+    },[] )
+
 
     // const handlePopUp = () => {
     //     setShowPopUp((prev) => !prev)
@@ -17,9 +55,13 @@ const DoctorDetails = () => {
         <>
             <div className='w-full h-full'>
 
-                {/* <div className={` ${showPopUp ? 'block' : 'hidden'} h-[35rem] w-[30rem] bg-white flex justify-center items-center absolute top-[10%] left-[35%]`} >
-                    <p>Hello</p>
-                </div> */}
+                       {/* PopUp BOX */}
+                <div ref={divRef} className={` ${showPopUp ? 'block' : 'hidden'} fixed z-40 h-screen inset-0 bg-[#18181893] flex justify-center items-center `} >
+                    <div className='h-[30rem] w-[25rem] bg-white flex flex-col justify-center items-center'>
+                        <h1 className='text-black' >Hello Peter</h1>
+                        <button className='text-black bg-red-500' onClick={closeShowPopUp} >Close</button>
+                    </div>
+                </div>
 
                 <div className='bg-[#E7E7E7] md:p-6 p-3 mt-8 rounded-lg' style={{ boxShadow: '0px 4px 8px 0px #00000040' }}>
 
@@ -57,9 +99,9 @@ const DoctorDetails = () => {
                         </div>
 
                         <div>
-                            <Link to="/AppointBoking" >
-                                <button className='md:mt-3 mt-8 md:py-4 py-3 md:px-16 px-6 rounded-lg md:text-lg text-sm font-medium  bg-[#DDB660] hover:bg-[#bc984c] w-fit self-center '>Video Consultation</button>
-                            </Link>
+                            {/* <Link to="/AppointBoking" > */}
+                                <button onClick={openShowPopUp} className='md:mt-3 mt-8 md:py-4 py-3 md:px-16 px-6 rounded-lg md:text-lg text-sm font-medium  bg-[#DDB660] hover:bg-[#bc984c] w-fit self-center '>Video Consultation</button>
+                            {/* </Link> */}
                         </div>
                     </div>
 
@@ -83,7 +125,7 @@ const DoctorDetails = () => {
                             <div className='flex md:flex-row flex-col md:justify-between justify-center md:items-start items-center mt-1'>
                                 <div className='flex items-center md:gap-2 gap-1 md:pl-2'>
                                     <div className='md:h-[0.5rem] md:w-[0.5rem] h-2 w-2 bg-[#55B865] rounded-full'></div>
-                                    <p className='text-[#55B865] md:text-md text-[0.75rem] font-medium '>Available tomorrow</p>
+                                    <p className='text-[#55B865] md:text-base text-[0.75rem] font-medium '>Available tomorrow</p>
                                 </div>
                                 <p className='text-black text-lg'>Rs. 3,000</p>
                             </div>
@@ -96,7 +138,7 @@ const DoctorDetails = () => {
                             <div className='flex md:flex-row flex-col md:justify-between justify-center md:items-start items-center mt-1'>
                                 <div className='flex items-center md:gap-2 gap-1 md:pl-2'>
                                     <div className='md:h-[0.5rem] md:w-[0.5rem] h-2 w-2 bg-[#55B865] rounded-full'></div>
-                                    <p className='text-[#55B865] md:text-md text-[0.75rem] font-medium '>Available tomorrow</p>
+                                    <p className='text-[#55B865] md:text-base text-[0.75rem] font-medium '>Available tomorrow</p>
                                 </div>
                                 <p className='text-black text-lg'>Rs. 3,000</p>
                             </div>
