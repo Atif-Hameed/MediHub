@@ -88,7 +88,7 @@ const AppointBoking = () => {
             }}>
                 <Navbar />
 
-                <div className='w-full h-full md:px-24 px-6'>
+                <div className='w-full h-full md:px-24 px-4'>
 
                     <div className='bg-[#D9D9D9] md:px-8 px-4 md:py-10 py-4 md:pb-36 pb-16 rounded-t-2xl mt-10' >
 
@@ -205,8 +205,8 @@ const AppointBoking = () => {
                         <DoctorReviews />
 
                         <div className='flex justify-between items-center mt-12'>
-                            <h1 className='text-black text-[1.5rem]'>Doctors in other regions</h1>
-                            <IoMdAdd className='text-black text-2xl ' />
+                            <h1 className='text-black md:text-[1.5rem] text-lg'>Doctors in other regions</h1>
+                            <IoMdAdd className='text-black md:text-2xl text-xl ' />
                         </div>
 
                     </div>

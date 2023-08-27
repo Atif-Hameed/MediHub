@@ -59,7 +59,7 @@ const DoctorReviews = () => {
                     />
                 </div>
 
-                <button onClick={handleShow} className={`py-3 mt-8 px-12 bg-transparent text-black border-2 border-black ml-1 rounded-lg font-medium text-lg ${show ? 'hidden' : 'block'} `}>Load more reviews</button>
+                <button onClick={handleShow} className={`py-3 mt-8 md:px-12 px-6 bg-transparent md:text-md text-sm text-black border-2 border-black ml-1 rounded-lg font-medium text-lg ${show ? 'hidden' : 'block'} `}>Load more reviews</button>
 
             </div>
         </>
