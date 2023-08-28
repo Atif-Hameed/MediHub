@@ -3,6 +3,9 @@ import triangle from '../../Assets/trianle.svg'
 import videoIcon from '../../Assets/videoIcon.svg'
 import profilePhoto from '../../Assets/profilePhoto.svg'
 import { Link } from 'react-router-dom';
+import horizontalShades from '../../Assets/horizontalShades.svg'
+import { RxCross1 } from 'react-icons/rx';
+import { LiaLongArrowAltRightSolid } from 'react-icons/lia';
 
 
 const DoctorDetails = () => {
@@ -16,50 +19,48 @@ const DoctorDetails = () => {
         setShowPopUp(false)
     }
 
-    useEffect( () => {
-        if(showPopUp){
+    useEffect(() => {
+        if (showPopUp) {
             document.body.classList.add("overflow-hidden")
         }
-        else{
+        else {
             document.body.classList.remove("overflow-hidden")
         }
 
         return () => {
             document.body.classList.remove("overflow-hidden")
         }
-    },[showPopUp] )
-
-    const divRef = useRef(null)
-
-    useEffect( () => {
-
-        const handleClickOutside = (event) => {
-            if(divRef.current && !divRef.current.contains(event.target)){
-                setShowPopUp(false)
-            }
-
-            document.addEventListener("mousedown", handleClickOutside)
-
-            return () => {
-                document.removeEventListener("mousedown", handleClickOutside)
-            }
-        }
-    },[] )
-
-
-    // const handlePopUp = () => {
-    //     setShowPopUp((prev) => !prev)
-    // }
+    }, [showPopUp])
 
     return (
         <>
             <div className='w-full h-full'>
 
-                       {/* PopUp BOX */}
-                <div ref={divRef} className={` ${showPopUp ? 'block' : 'hidden'} fixed z-40 h-screen inset-0 bg-[#18181893] flex justify-center items-center `} >
-                    <div className='h-[30rem] w-[25rem] bg-white flex flex-col justify-center items-center'>
-                        <h1 className='text-black' >Hello Peter</h1>
-                        <button className='text-black bg-red-500' onClick={closeShowPopUp} >Close</button>
+                {/* PopUp BOX */}
+                <div onClick={closeShowPopUp} className={` ${showPopUp ? 'block' : 'hidden'} px-4 fixed z-40 h-screen inset-0 bg-[#18181893] flex justify-center items-center `} >
+                    <div onClick={e => e.stopPropagation()} className='md:h-[35rem] h-[25rem] w-[33rem] bg-[#D9D9D9] rounded-xl'>
+                        <div className='h-[12%] w-full bg-[#CCCCCC]  flex items-center justify-end px-6 rounded-t-xl'>
+                            <RxCross1 onClick={closeShowPopUp} className='cursor-pointer text-black text-xl' />
+                        </div>
+                        <div className='flex justify-between h-[88%] grow flex-col md:py-16 py-8 md:px-12 px-6'>
+                            <div className='md:mt-4'>
+                                <h1 className='md:text-3xl text-2xl text-black font-medium text-center'>Enter Your Email Address</h1>
+                                <p className='md:text-base text-sm mt-4 text-black text-center'>We share this information with the doctor</p>
+                            </div>
+                            <div>
+                                <input type="text" className='text-black px-3 font-medium rounded h-[2.8rem] w-full' style={{ boxShadow: '0px 4px 4px 0px #00000040' }} />
+                            </div>
+                            <div className='h-[3rem] rounded w-full md:mt-6'>
+                                <Link to="/AppointBoking">
+                                    <div className='flex items-center rounded' style={{ backgroundImage: `url(${horizontalShades})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100%', width: '100%' }}>
+                                        <button className='flex items-center justify-center w-full gap-2'>
+                                            <p className='text-white text-xl font-thin'>Continue</p>
+                                            <LiaLongArrowAltRightSolid className='text-white text-2xl mt-1 font-thin' />
+                                        </button>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -100,7 +101,7 @@ const DoctorDetails = () => {
 
                         <div>
                             {/* <Link to="/AppointBoking" > */}
-                                <button onClick={openShowPopUp} className='md:mt-3 mt-8 md:py-4 py-3 md:px-16 px-6 rounded-lg md:text-lg text-sm font-medium  bg-[#DDB660] hover:bg-[#bc984c] w-fit self-center '>Video Consultation</button>
+                            <button onClick={openShowPopUp} className='md:mt-3 mt-8 md:py-4 py-3 md:px-16 px-6 rounded-lg md:text-lg text-sm font-medium  bg-[#DDB660] hover:bg-[#bc984c] w-fit self-center '>Video Consultation</button>
                             {/* </Link> */}
                         </div>
                     </div>
