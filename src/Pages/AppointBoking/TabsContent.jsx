@@ -3,7 +3,6 @@ import evening from '../../Assets/evening.svg'
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import horizontalShades from '../../Assets/horizontalShades.svg'
 import { RxCross1 } from 'react-icons/rx';
-import { LiaLongArrowAltRightSolid } from 'react-icons/lia';
 import profilePhoto from '../../Assets/profilePhoto.svg'
 
 

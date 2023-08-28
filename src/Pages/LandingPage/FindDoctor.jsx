@@ -71,11 +71,11 @@ const FindDoctor = () => {
 
                                 <div className='flex relative items-center bg-white rounded-lg p-2 md:w-[44%] w-full md:gap-4 gap-1'>
                                     <BiSearch className='text-black md:text-3xl text-xl' />
-                                    <input type="text" placeholder='Search Doctor, Conditions or Procedures' className='w-full md:text-md text-[0.75rem] text-black focus:outline-none placeholder-black ::placeholder font-semibold' />
+                                    <input type="text" placeholder='Search Doctor, Conditions or Procedures' className='w-full md:text-base text-[0.75rem] text-black focus:outline-none placeholder-black ::placeholder font-semibold' />
                                 </div>
                                 <div className='flex relative items-center bg-white rounded-lg p-2 md:w-[44%] w-full md:gap-4 gap-1'>
                                     <GrLocation className=' md:text-3xl text-xl' />
-                                    <input type="text" placeholder='Set Your Location' className='w-full md:text-md text-[0.75rem] text-black focus:outline-none placeholder-black ::placeholder font-semibold' />
+                                    <input type="text" placeholder='Set Your Location' className='w-full md:text-base text-[0.75rem] text-black focus:outline-none placeholder-black ::placeholder font-semibold' />
                                 </div>
                                 
                                 <button type='submit' value='submit' className='flex bg-black p-2 bg-gradient-to-b w-fit from-[#bd966c] via-[#966b3a] to-[#351e07] rounded-lg'>

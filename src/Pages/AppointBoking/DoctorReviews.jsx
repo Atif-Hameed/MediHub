@@ -4,7 +4,7 @@ import greenThumb from '../../Assets/greenThumb.svg'
 const Reviews = (props) => {
     return (
         <>
-            <div className='md:px-6 px-3 md:py-4 py-3 border-2 border-[#CCCCCC] rounded-lg mt-8 ml-1'>
+            <div className='md:px-6 px-3 md:py-4 py-3 border-2 border-[#CCCCCC] rounded-lg mt-8 md:ml-1'>
                 <div className='flex items-start md:gap-4 gap-2'>
                     <img src={greenThumb} alt="" />
                     <div className='flex flex-col md:gap-8 gap-6'>
@@ -59,7 +59,7 @@ const DoctorReviews = () => {
                     />
                 </div>
 
-                <button onClick={handleShow} className={`py-3 mt-8 md:px-12 px-6 bg-transparent md:text-md text-sm text-black border-2 border-black ml-1 rounded-lg font-medium text-lg ${show ? 'hidden' : 'block'} `}>Load more reviews</button>
+                <button onClick={handleShow} className={`py-3 mt-8 md:px-12 px-6 bg-transparent md:text-md text-sm text-black border-2 border-black ml-1 rounded-lg font-medium ${show ? 'hidden' : 'block'} `}>Load more reviews</button>
 
             </div>
         </>

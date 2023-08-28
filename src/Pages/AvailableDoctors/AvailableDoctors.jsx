@@ -76,7 +76,7 @@ const AvailableDoctors = () => {
 
                         {/* View Moble Screen Only */}
                         <div className='md:hidden block'>
-                            <button onClick={handleOpen} ref={divRef}>{open ? <RxCross1 className='text-black text-2xl'/> : <AiOutlineMenu className='text-black text-2xl' />}</button>
+                            <button onClick={handleOpen} ref={divRef}>{open ? <RxCross1 className='text-black text-2xl' /> : <AiOutlineMenu className='text-black text-2xl' />}</button>
                             <div className={`flex transition-all duration-700 rounded-lg py-3  flex-col gap-2 bg-[#181818] items-center ${open ? 'block' : 'hidden'} `}>
                                 <p className='md:text-sm text-[0.7rem]'>HOME</p>
                                 <p className='md:text-sm text-[0.7rem]'>PAKISTAN</p>
